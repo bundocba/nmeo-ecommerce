@@ -142,7 +142,7 @@ class ProductListScreen extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .titleLarge
-                  ?.copyWith(color: Colors.deepOrange.withOpacity(0.7)),
+                  ?.copyWith(color: Colors.deepOrange.withOpacity(0.9)),
             ),
           )
         ],
@@ -173,7 +173,7 @@ class ProductListScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Hello Sina",
+                  "Hello NMeo",
                   style: Theme.of(context).textTheme.displayLarge,
                 ),
                 Text(

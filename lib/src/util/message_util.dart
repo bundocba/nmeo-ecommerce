@@ -1,3 +1,4 @@
+import 'package:e_commerce_flutter/core/app_color.dart';
 import 'package:flutter/material.dart';
 
 void showTopCenterMessage(BuildContext context, String message, Color color, bool isSuccess) {
@@ -12,7 +13,7 @@ void showTopCenterMessage(BuildContext context, String message, Color color, boo
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
           decoration: BoxDecoration(
-            color: isSuccess ? color : Colors.red, // Use red color for error message
+            color: isSuccess ? color : AppColor.errorMessage, // Use red color for error message
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: Row(

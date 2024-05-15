@@ -9,6 +9,7 @@ import 'package:e_commerce_flutter/src/view/widget/carousel_slider.dart';
 import 'package:e_commerce_flutter/src/controller/product_controller.dart';
 
 import '../../util/message_util.dart';
+import '../../util/price_util.dart';
 
 final ProductController controller = Get.put(ProductController());
 
@@ -132,14 +133,14 @@ class ProductDetailScreen extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            product.off != null ? "\$${product.off}" : "\$${product.price}",
+                            product.off != null ? "${PriceUtil.formatPrice(product.off)}" : "${PriceUtil.formatPrice(product.price)}",
                             style: Theme.of(context).textTheme.displayLarge,
                           ),
                           const SizedBox(width: 3),
                           Visibility(
                             visible: product.off != null ? true : false,
                             child: Text(
-                              "\$${product.price}",
+                              "${PriceUtil.formatPrice(product.price)}",
                               style: const TextStyle(
                                 decoration: TextDecoration.lineThrough,
                                 color: Colors.grey,

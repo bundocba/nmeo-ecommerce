@@ -8,6 +8,7 @@ import 'package:e_commerce_flutter/src/controller/product_controller.dart';
 import 'package:e_commerce_flutter/src/view/animation/animated_switcher_wrapper.dart';
 
 import '../../util/message_util.dart';
+import '../../util/price_util.dart';
 
 final ProductController controller = Get.put(ProductController());
 
@@ -86,8 +87,8 @@ class CartScreen extends StatelessWidget {
                     const SizedBox(height: 5),
                     Text(
                       controller.isPriceOff(product)
-                          ? "\$${product.off}"
-                          : "\$${product.price}",
+                          ? "${PriceUtil.formatPrice(product.off)}"
+                          :  "${PriceUtil.formatPrice(product.price)}",
                       style: const TextStyle(
                         fontWeight: FontWeight.w900,
                         fontSize: 23,
@@ -161,7 +162,7 @@ class CartScreen extends StatelessWidget {
             () {
               return AnimatedSwitcherWrapper(
                 child: Text(
-                  "\$${controller.totalPrice.value}",
+                  "${PriceUtil.formatPrice(controller.totalPrice.value)}",
                   key: ValueKey<int>(controller.totalPrice.value),
                   style: const TextStyle(
                     fontSize: 25,

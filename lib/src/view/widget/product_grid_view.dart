@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:e_commerce_flutter/src/model/product.dart';
 import 'package:e_commerce_flutter/src/view/animation/open_container_wrapper.dart';
 
+import '../../util/price_util.dart';
+
 class ProductGridView extends StatelessWidget {
   const ProductGridView({
     super.key,
@@ -41,7 +43,7 @@ class ProductGridView extends StatelessWidget {
               Icons.favorite,
               color: items[index].isFavorite
                   ? Colors.redAccent
-                  : const Color(0xFFA6A3A0),
+                  : const Color(0xFFE8E5E5),
             ),
             onPressed: () => likeButtonPressed(index),
           ),
@@ -94,15 +96,15 @@ class ProductGridView extends StatelessWidget {
               children: [
                 Text(
                   product.off != null
-                      ? "\$${product.off}"
-                      : "\$${product.price}",
+                      ? "${PriceUtil.formatPrice(product.off)}"
+                      :  "${PriceUtil.formatPrice(product.price)}",
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(width: 3),
                 Visibility(
                   visible: product.off != null ? true : false,
                   child: Text(
-                    "\$${product.price}",
+                    "${PriceUtil.formatPrice(product.price)}",
                     style: const TextStyle(
                       decoration: TextDecoration.lineThrough,
                       color: Colors.grey,

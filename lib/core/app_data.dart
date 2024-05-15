@@ -19,9 +19,9 @@ class AppData {
   static List<Product> products = [
     Product(
       name: 'Samsung Galaxy A53 5G',
-      price: 460,
+      price: 46000,
       isAvailable: true,
-      off: 300,
+      off: 30000,
       quantity: 0,
       images: [
         'assets/images/a53_1.png',
@@ -34,9 +34,9 @@ class AppData {
     ),
     Product(
       name: 'Samsung Galaxy Tab S7 FE',
-      price: 380,
+      price: 38000,
       isAvailable: false,
-      off: 220,
+      off: 22000,
       quantity: 0,
       images: [
         'assets/images/tab_s7_fe_1.png',
@@ -49,7 +49,7 @@ class AppData {
     ),
     Product(
       name: 'Samsung Galaxy Tab S8+',
-      price: 650,
+      price: 65000,
       isAvailable: true,
       off: null,
       quantity: 0,
@@ -64,9 +64,9 @@ class AppData {
     ),
     Product(
       name: 'Samsung Galaxy Watch 4',
-      price: 229,
+      price: 22900,
       isAvailable: true,
-      off: 200,
+      off: 20000,
       quantity: 0,
       images: [
         'assets/images/galaxy_watch_4_1.png',
@@ -86,7 +86,7 @@ class AppData {
     ),
     Product(
       name: 'Apple Watch 7',
-      price: 330,
+      price: 33000,
       isAvailable: true,
       off: null,
       quantity: 0,
@@ -107,7 +107,7 @@ class AppData {
     ),
     Product(
       name: 'Beats studio 3',
-      price: 230,
+      price: 23000,
       isAvailable: true,
       off: null,
       quantity: 0,
@@ -123,7 +123,7 @@ class AppData {
     ),
     Product(
       name: 'Samsung Q60 A',
-      price: 497,
+      price: 49700,
       isAvailable: true,
       off: null,
       quantity: 0,
@@ -144,7 +144,7 @@ class AppData {
     ),
     Product(
       name: 'Sony x 80 J',
-      price: 498,
+      price: 49800,
       isAvailable: true,
       off: null,
       quantity: 0,
