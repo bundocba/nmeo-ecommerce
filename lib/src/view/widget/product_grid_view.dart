@@ -1,3 +1,4 @@
+import 'package:e_commerce_flutter/core/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce_flutter/src/model/product.dart';
 import 'package:e_commerce_flutter/src/view/animation/open_container_wrapper.dart';
@@ -56,7 +57,7 @@ class ProductGridView extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: const Color(0xFFE5E6E8),
+        color: AppColor.lightGrey,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Image.asset(product.images[0], scale: 3),
@@ -70,8 +71,10 @@ class ProductGridView extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         height: 70,
         decoration: const BoxDecoration(
-          color: Colors.white,
+          color: Colors.white54,
           borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
             bottomLeft: Radius.circular(15),
             bottomRight: Radius.circular(15),
           ),
@@ -87,7 +90,7 @@ class ProductGridView extends StatelessWidget {
                 maxLines: 1,
                 style: const TextStyle(
                   fontWeight: FontWeight.w500,
-                  color: Colors.grey,
+                  color: Colors.black54,
                 ),
               ),
             ),
@@ -124,28 +127,28 @@ class ProductGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
-      child: GridView.builder(
-        itemCount: items.length,
-        shrinkWrap: true,
-        physics: const ScrollPhysics(),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          childAspectRatio: 10 / 16,
-          crossAxisCount: 2,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
+        child: GridView.builder(
+          itemCount: items.length,
+          shrinkWrap: true,
+          physics: const ScrollPhysics(),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            childAspectRatio: 10 / 16,
+            crossAxisCount: 2,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+          ),
+          itemBuilder: (_, index) {
+            Product product = items[index];
+            return OpenContainerWrapper(
+              product: product,
+              child: GridTile(
+                header: _gridItemHeader(product, index),
+                footer: _gridItemFooter(product, context),
+                child: _gridItemBody(product),
+              ),
+            );
+          },
         ),
-        itemBuilder: (_, index) {
-          Product product = items[index];
-          return OpenContainerWrapper(
-            product: product,
-            child: GridTile(
-              header: _gridItemHeader(product, index),
-              footer: _gridItemFooter(product, context),
-              child: _gridItemBody(product),
-            ),
-          );
-        },
-      ),
     );
   }
 }

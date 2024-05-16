@@ -18,6 +18,32 @@ class AppData {
 
   static List<Product> products = [
     Product(
+      name: 'Trà Sữa Matcha',
+      price: 45000,
+      isAvailable: true,
+      off: 30000,
+      quantity: 0,
+      images: [
+        'assets/images/phclong.png',
+      ],
+      isFavorite: true,
+      rating: 5,
+      type: ProductType.tea,
+    ),
+    Product(
+      name: 'Hồng Trà Đào Sữa',
+      price: 55000,
+      isAvailable: true,
+      off: null,
+      quantity: 0,
+      images: [
+        'assets/images/hngtrchanh.png',
+      ],
+      isFavorite: true,
+      rating: 4,
+      type: ProductType.tea,
+    ),
+    Product(
       name: 'Samsung Galaxy A53 5G',
       price: 46000,
       isAvailable: true,
@@ -30,7 +56,7 @@ class AppData {
       ],
       isFavorite: true,
       rating: 1,
-      type: ProductType.mobile,
+      type: ProductType.tea,
     ),
     Product(
       name: 'Samsung Galaxy Tab S7 FE',
@@ -82,7 +108,7 @@ class AppData {
           Categorical(CategoricalType.large, false),
         ],
       ),
-      type: ProductType.watch,
+      type: ProductType.food,
     ),
     Product(
       name: 'Apple Watch 7',
@@ -103,7 +129,7 @@ class AppData {
           Numerical('45', false),
         ],
       ),
-      type: ProductType.watch,
+      type: ProductType.food,
     ),
     Product(
       name: 'Beats studio 3',
@@ -171,25 +197,25 @@ class AppData {
       icon: Icons.all_inclusive,
     ),
     ProductCategory(
-      type: ProductType.mobile,
-      icon: FontAwesomeIcons.mobileScreenButton,
+      type: ProductType.tea,
+      icon: FontAwesomeIcons.glassWater,
     ),
     ProductCategory(
-      type: ProductType.watch,
-      icon: Icons.watch,
+      type: ProductType.food,
+      icon: FontAwesomeIcons.bowlFood,
     ),
-    ProductCategory(
-      type: ProductType.tablet,
-      icon: FontAwesomeIcons.tablet,
-    ),
-    ProductCategory(
-      type: ProductType.headphone,
-      icon: Icons.headphones,
-    ),
-    ProductCategory(
-      type: ProductType.tv,
-      icon: Icons.tv,
-    ),
+    // ProductCategory(
+    //   type: ProductType.tablet,
+    //   icon: FontAwesomeIcons.tablet,
+    // ),
+    // ProductCategory(
+    //   type: ProductType.headphone,
+    //   icon: Icons.headphones,
+    // ),
+    // ProductCategory(
+    //   type: ProductType.tv,
+    //   icon: Icons.tv,
+    // ),
   ];
 
   static List<Color> randomColors = [
