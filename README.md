@@ -12,7 +12,7 @@
 
 E-Commerce app is a design implementation of [E-commerce App](https://dribbble.com/shots/15550702-E-commerce-Mobile-App) designed by [Billah](https://dribbble.com/designermasum)
 
-![](https://github.com/bundocba/nmeo-ecommerce/tree/main/screenshots/screenshot.png?raw=true)
+![](https://github.com/bundocba/nmeo-ecommerce/blob/main/screenshots/screenshot.png?raw=true)
 
 
 ## Screenshots
